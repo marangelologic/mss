@@ -1,0 +1,36 @@
+body {
+	margin : 0px;
+}
+
+#header{
+	margin : 10px;
+	height : 90px;
+	background-color: #a9a9a9;
+	background-image: url("../images/header.png");
+	background-size: content;
+}
+#navbar{
+	  margin : 10px;
+	  background-color: #cdcdcd; 
+	  height: 35px;
+}
+.main
+{
+	margin-top : 10px;
+	margin-bottom : 10px;
+	margin-right : 10px;
+	margin-left : 320px;
+	background-color: #ededed;
+	padding: 20px;
+}    
+
+.sidebar{
+	background-color: #efefef;
+	margin-top : 10px;
+	margin-bottom : 10px;
+	margin-right : 10px;
+	margin-left : 320px;
+	float : left;
+	width: 260px;
+	padding: 20px;
+}

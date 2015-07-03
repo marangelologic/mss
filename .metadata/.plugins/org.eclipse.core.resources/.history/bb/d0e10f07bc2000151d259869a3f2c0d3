@@ -1,0 +1,13 @@
+body {
+	margin : 0px;
+}
+
+#header{
+	margin : 10px;
+	height : 90px;
+	background-color: #a9a9a9;
+	background-image: url("/images/header.png");
+}
+#navbar{
+	
+}  

@@ -1,0 +1,7 @@
+package com.modules.service;
+
+public class Modules {
+	@Path("/test")
+	
+	
+}

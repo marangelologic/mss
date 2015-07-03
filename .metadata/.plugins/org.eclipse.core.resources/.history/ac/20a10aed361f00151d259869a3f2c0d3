@@ -1,0 +1,9 @@
+package com.modules.service;
+
+import javax.ws.rs.*;
+
+public class Modules {
+	@Path("/test")
+	
+	
+}

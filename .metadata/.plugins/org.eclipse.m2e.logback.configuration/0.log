@@ -1,0 +1,65 @@
+2015-06-19 20:58:08,771 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-8.1.10.v20130312
+2015-06-19 20:58:09,176 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:54679
+2015-06-19 21:58:16,172 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/help,null}
+2015-06-19 22:17:34,654 [ModalContext] ERROR o.e.m.c.u.i.w.MavenProjectWizardArchetypeParametersPage - Could not create artifact repository
+org.eclipse.core.runtime.CoreException: Could not create artifact repository
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.createArtifactRepository(MavenImpl.java:1038) ~[na:na]
+	at org.eclipse.m2e.core.internal.archetype.ArchetypeManager.getArchetypeRepository(ArchetypeManager.java:158) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypeParametersPage$RequiredPropertiesLoader.run(MavenProjectWizardArchetypeParametersPage.java:445) ~[org.eclipse.m2e.core.ui_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121) [org.eclipse.jface_3.9.1.v20130725-1141.jar:na]
+Caused by: org.apache.maven.artifact.InvalidRepositoryException: URL missing for repository jersey-quickstart-webapp-repo
+	at org.apache.maven.repository.legacy.LegacyRepositorySystem.buildArtifactRepository(LegacyRepositorySystem.java:775) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.createArtifactRepository(MavenImpl.java:1034) ~[na:na]
+	... 3 common frames omitted
+2015-06-19 22:17:59,435 [Worker-1] ERROR o.e.m.c.i.p.ProjectConfigurationManager - Unable to create project from archetype [org.glassfish.jersey.archetypes:jersey-quickstart-webapp:2.16 -> ]
+org.apache.maven.archetype.exception.UnknownArchetype: The desired archetype does not exist (org.glassfish.jersey.archetypes:jersey-quickstart-webapp:2.16)
+	at org.apache.maven.archetype.generator.DefaultArchetypeGenerator.generateArchetype(DefaultArchetypeGenerator.java:112) ~[archetype-common-2.0-alpha-4.jar:2.0-alpha-4]
+	at org.apache.maven.archetype.generator.DefaultArchetypeGenerator.generateArchetype(DefaultArchetypeGenerator.java:286) ~[archetype-common-2.0-alpha-4.jar:2.0-alpha-4]
+	at org.apache.maven.archetype.DefaultArchetype.generateProjectFromArchetype(DefaultArchetype.java:69) ~[archetype-common-2.0-alpha-4.jar:2.0-alpha-4]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.createArchetypeProjects0(ProjectConfigurationManager.java:761) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$4.call(ProjectConfigurationManager.java:710) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$4.call(ProjectConfigurationManager.java:1) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:161) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:137) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:89) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1305) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.createArchetypeProjects(ProjectConfigurationManager.java:708) [org.eclipse.m2e.core_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizard$5.doCreateMavenProjects(MavenProjectWizard.java:244) [org.eclipse.m2e.core.ui_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstactCreateMavenProjectJob$1.doCreateMavenProjects(AbstactCreateMavenProjectJob.java:46) [org.eclipse.m2e.core.ui_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectsOperation.run(AbstractCreateMavenProjectsOperation.java:74) [org.eclipse.m2e.core.ui_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstactCreateMavenProjectJob.runInWorkspace(AbstactCreateMavenProjectJob.java:50) [org.eclipse.m2e.core.ui_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38) [org.eclipse.core.resources_3.8.101.v20130717-0806.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53) [org.eclipse.core.jobs_3.5.300.v20130429-1813.jar:na]
+2015-06-19 22:21:17,212 [ModalContext] ERROR o.e.m.c.u.i.w.MavenProjectWizardArchetypeParametersPage - Could not create artifact repository
+org.eclipse.core.runtime.CoreException: Could not create artifact repository
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.createArtifactRepository(MavenImpl.java:1038) ~[na:na]
+	at org.eclipse.m2e.core.internal.archetype.ArchetypeManager.getArchetypeRepository(ArchetypeManager.java:158) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypeParametersPage$RequiredPropertiesLoader.run(MavenProjectWizardArchetypeParametersPage.java:445) ~[org.eclipse.m2e.core.ui_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121) [org.eclipse.jface_3.9.1.v20130725-1141.jar:na]
+Caused by: org.apache.maven.artifact.InvalidRepositoryException: URL missing for repository jersey-quickstart-webapp-repo
+	at org.apache.maven.repository.legacy.LegacyRepositorySystem.buildArtifactRepository(LegacyRepositorySystem.java:775) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.createArtifactRepository(MavenImpl.java:1034) ~[na:na]
+	... 3 common frames omitted
+2015-06-19 22:23:45,163 [ModalContext] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2015-06-19 22:23:53,334 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/glassfish/jersey/archetypes/jersey.quickstart-webapp/2.18/jersey.quickstart-webapp-2.18.pom
+2015-06-19 22:23:53,375 [ModalContext] ERROR o.e.m.c.u.i.w.MavenProjectWizardArchetypePage - Can't resolve Archetype org.glassfish.jersey.archetypes:jersey.quickstart-webapp:2.18
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersey.archetypes:jersey.quickstart-webapp:pom:2.18
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:750) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:161) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:137) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:89) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:717) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:694) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$18.run(MavenProjectWizardArchetypePage.java:784) ~[org.eclipse.m2e.core.ui_1.4.0.20130601-0317.jar:na]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121) [org.eclipse.jface_3.9.1.v20130725-1141.jar:na]
+2015-06-19 22:27:12,775 [Worker-4] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' C:\Users\u6016812\Desktop\rostermanagement\servicepulsev3\pom.xml
+2015-06-19 22:27:44,233 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: servicepulse.com.services:servicepulsev3:0.0.1-SNAPSHOT @ C:\Users\u6016812\Desktop\rostermanagement\servicepulsev3\pom.xml.
+2015-06-19 22:27:51,623 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: servicepulse.com.services:servicepulsev3:0.0.1-SNAPSHOT @ C:\Users\u6016812\Desktop\rostermanagement\servicepulsev3\pom.xml.
+2015-06-19 22:27:51,983 [Worker-18] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: servicepulse.com.services:servicepulsev3:0.0.1-SNAPSHOT @ C:\Users\u6016812\Desktop\rostermanagement\servicepulsev3\pom.xml.
+2015-06-19 22:27:53,672 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: servicepulse.com.services:servicepulsev3:0.0.1-SNAPSHOT @ C:\Users\u6016812\Desktop\rostermanagement\servicepulsev3\pom.xml.
+2015-06-19 22:30:55,065 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2015-06-29 20:46:00,473 [Worker-48] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' C:\Users\u6016812\Desktop\rostermanagement\msstracker\pom.xml
+2015-06-29 20:46:08,111 [Worker-48] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: co.mss.tracker:msstracker:0.0.1-SNAPSHOT @ C:\Users\u6016812\Desktop\rostermanagement\msstracker\pom.xml.
+2015-06-29 20:46:10,343 [Worker-50] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: co.mss.tracker:msstracker:0.0.1-SNAPSHOT @ C:\Users\u6016812\Desktop\rostermanagement\msstracker\pom.xml.
+2015-06-29 20:46:10,973 [Worker-48] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: co.mss.tracker:msstracker:0.0.1-SNAPSHOT @ C:\Users\u6016812\Desktop\rostermanagement\msstracker\pom.xml.
