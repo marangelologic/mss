@@ -1,0 +1,36 @@
+package com.modules.service;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+
+@Path("/test")
+public class Modules {
+
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String Status() {
+
+		return "OK";
+	}
+	
+	@Component  
+	@Provider  
+	public class ResourceFilterFactory extends RolesAllowedResourceFilterFactory {  
+	  
+	    @Autowired  
+	    private SecurityContextFilter securityContextFilter;  
+	  
+	    @Override  
+	    public List<ResourceFilter> create(AbstractMethod am) {  
+	        List<ResourceFilter> filters = super.create(am);  
+	        if (filters == null) {  
+	            filters = new ArrayList<ResourceFilter>();  
+	        }  
+	        List<ResourceFilter> securityFilters = new ArrayList<ResourceFilter>(filters);  
+	        //put the Security Filter first in line  
+	        securityFilters.add(0, securityContextFilter);  
+	        return securityFilters;  
+	    }  
+	}  
+
+}

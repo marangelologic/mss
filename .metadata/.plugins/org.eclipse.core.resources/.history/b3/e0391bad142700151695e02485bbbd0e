@@ -1,0 +1,12 @@
+var TM = TM || {};
+
+TM.index = function() {
+
+};
+IndexC.index.prototype = {
+
+		renderTestChart : function() {
+			
+		},
+
+};

@@ -1,0 +1,12 @@
+var TM = TM || {};
+
+TM.tmconstructor = function() {
+
+};
+IndexC.index.prototype = {
+
+		renderTestChart : function() {
+			
+		},
+
+};

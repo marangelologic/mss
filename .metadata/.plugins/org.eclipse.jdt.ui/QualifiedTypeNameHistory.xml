@@ -2,4 +2,7 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="com.qa.model.TmQaModel"/>
+<fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,77 @@
+var IndexC = IndexC || {};
+
+IndexC.index = function() {
+
+};
+IndexC.index.prototype = {
+
+	renderTestChart : function() {
+		$(document).ready(function() {
+			$('#calendar').fullCalendar({
+				header : {
+					left : 'prev,next today',
+					center : 'title',
+					right : 'month,agendaWeek,agendaDay'
+				},
+				/* defaultView : "basicWeek", */
+				defaultDate : new Date(),
+				selectable : true,
+				eventDragStop : function(callback) {
+					alert(callback.start_date);
+				},
+				/*selectHelper : true,
+				select : function(start, end) {
+					var title = prompt('Event Title:');
+					var name = prompt('TEST');
+					var eventData;
+					if (title) {
+						eventData = {
+							title : title,
+							start : start,
+							end : end
+						};
+						$('#calendar')
+								.fullCalendar(
+										'renderEvent',
+										eventData,  
+										true); // stick?
+						// =
+						// true
+						
+					}
+					$('#calendar')
+							.fullCalendar(
+									'unselect');
+				},*/
+				editable : true,
+				eventLimit : true, // allow
+				// "more"
+				// link when
+				// too
+				// many events
+				events : this.PushEvent(),
+				dayClick : function(date, jsEvent, view) {
+				}
+			});  
+			$("#dp1").fdatepicker({
+				format : "yyyy-mm-dd",
+				"setDate" : new Date()
+			});
+		});
+	},
+
+	testAlert : function(stringMsg, stringMsg2) {
+		alert(stringMsg + stringMsg2);
+	},
+	testConsole : function(stringMsg) {
+		console.log(stringMsg);
+	},PushEvent : function (){
+		var data ="[{ title : 'Happy Hours',start : '2015-07-12T18:30:00'}]";
+		alert(JSON.stringify(data));
+		$('#calendar').fullCalendar('addEventSource', JSON.stringify(data));
+		
+		return data;
+		
+	}
+
+};

@@ -1,0 +1,121 @@
+var IndexC = IndexC || {};
+
+IndexC.index = function() {
+
+};
+IndexC.index.prototype = {
+
+	renderTestChart : function() {
+		$(document).ready(function() {
+			$('#calendar').fullCalendar({
+				header : {
+					left : 'prev,next today',
+					center : 'title',
+					right : 'month,agendaWeek,agendaDay'
+				},
+				/* defaultView : "basicWeek", */
+				defaultDate : new Date(),
+				selectable : true,
+				eventDragStop : function(callback) {
+					alert(callback.start_date);
+				},
+				selectHelper : true,
+				select : function(start, end) {
+					var title = prompt('Event Title:');
+					var name = prompt('TEST');
+					var eventData;
+					if (title) {
+						eventData = {
+							title : title,
+							start : start,
+							end : end
+						};
+						$('#calendar')
+								.fullCalendar(
+										'renderEvent',
+										eventData,  
+										true); // stick?
+						// =
+						// true
+						
+					}
+					$('#calendar')
+							.fullCalendar(
+									'unselect');
+				},
+				editable : true,
+				eventLimit : true, // allow
+				// "more"
+				// link when
+				// too
+				// many events
+				/*events : [ {
+					title : 'All Day Event',
+					start : '2015-07-01'
+				}, {
+					title : 'Long Event',
+					start : '2015-07-07',
+					end : '2015-07-10',
+					start_date : 'sample'
+				}, {
+					id : 999,
+					title : 'Repeating Event',
+					start : '2015-07-09T16:00:00'
+				}, {
+					id : 999,
+					title : 'Repeating Event',
+					start : '2015-07-16T16:00:00'
+				}, {
+					title : 'Conference',
+					start : '2015-07-11',
+					end : '2015-07-13'
+				}, {
+					title : 'Meeting',
+					start : '2015-07-12T10:30:00',
+					end : '2015-07-12T12:30:00'
+				}, {
+					title : 'Lunch',
+					start : '2015-07-12T12:00:00'
+				}, {
+					title : 'Meeting',  
+					start : '2015-07-12T14:30:00'
+				}, {  
+					title : 'Happy Hour',
+					start : '2015-05-12T17:30:00'
+				}, {  
+					title : 'Dinner',
+					start : '2015-07-12T20:00:00'
+				}, {  
+					title : 'Birthday Party',
+					start : '2015-07-13T07:00:00'
+				}, {
+					title : 'Click for Google',
+					url : 'http://google.com/',
+					start : '2015-07-28'
+				} ],*/
+				events : IndexC.index.PushEvent(),
+				dayClick : function(date, jsEvent, view) {
+				}
+			});
+			$("#dp1").fdatepicker({
+				format : "yyyy-mm-dd",   
+				"setDate" : new Date()
+			});
+		});
+	},
+
+	testAlert : function(stringMsg, stringMsg2) {
+		alert(stringMsg + stringMsg2);
+	},
+	testConsole : function(stringMsg) {
+		console.log(stringMsg);
+	},PushEvent : function (){
+		var data =  "{\"title\":\"Happy Hours\",\"start\" : \"2015-07-12T07:00:00\",\"\end\" : \"2015-07-12T08:00:00\"}";
+		var newData = $.parseJSON('[' + data + ']');
+		var plainData = newData;
+		alert(JSON.stringify(plainData));
+		return  JSON.stringify(plainData);
+		
+	}
+
+};

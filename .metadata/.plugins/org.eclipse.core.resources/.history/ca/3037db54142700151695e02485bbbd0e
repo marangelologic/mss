@@ -1,0 +1,10 @@
+var IndexC = IndexC || {};
+
+IndexC.index = function() {
+
+};
+IndexC.index.prototype = {
+
+		
+}
+}

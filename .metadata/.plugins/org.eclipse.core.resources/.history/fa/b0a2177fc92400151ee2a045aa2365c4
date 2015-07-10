@@ -1,0 +1,30 @@
+package com.modules.service;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+
+@Path("/test")
+public class Modules {
+
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String Status() {
+
+		return "OK";
+	}
+	
+	@Context private HttpServletRequest request;
+
+	@POST
+	@Path("/authenticate")
+	public String authenticate(@FormParam("username") String username, 
+	        @FormParam("password") String password) {
+
+	    // Implementation of your authentication logic
+	    if (authenticate(username, password)) {
+	        request.getSession(true);
+	        // Set the session attributes as you wish
+	    }
+	}
+
+}
